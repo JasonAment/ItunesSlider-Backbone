@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>Itunes Top Songs</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="center">
+    <h1>Top Itunes Songs</h1>
+    <!-- the next/previous buttons are not accessible as a div. Consider changing these to a clickable link with .preventDefault() -->
+    <div title="previous" tabindex="0" class="prev inactive"><</div>
+    <div id="carousel">
+        <!-- #carouselItem template is rendered here -->
+    </div>
+    <div title="next" tabindex="0" class="next">></div>
+</div>
+    <script id="carouselItem" type="text/template">
+        <ul>
+            <li><a href="<%= href %>" title="<%= title %>" target="_blank"><img src="<%= img %>" alt="<%= title %>" class="image" /></a></li>
+        </ul>
+    </script>
+
+
+  <script src="js/libs/jquery.js"></script>
+  <script src="js/libs/underscore.js"></script>
+  <script src="js/libs/backbone.js"></script>
+  <script src="js/models/singleItemModel.js"></script>
+  <script src="js/views/singleItemView.js"></script>
+  <script src="js/views/allItemsView.js"></script>
+  <script src="js/collections/allItems.js"></script>
+  <script src="js/routes/router.js"></script>
+  <script src="js/itemApp.js"></script>
+    <script src="js/carousel.js"></script>
+
+</body>
+</html>
